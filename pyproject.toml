@@ -1,0 +1,20 @@
+[project]
+name = "sleaze"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "aiohttp>=3.11.13",
+    "fastapi>=0.115.11",
+    "pydantic>=2.10.6",
+    "typer>=0.15.2",
+    "uvicorn>=0.34.0",
+]
+
+[project.scripts]
+sleaze = "sleaze.__main__:cli"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
