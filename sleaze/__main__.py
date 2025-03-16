@@ -182,6 +182,17 @@ class MonzoTransaction(pydantic.BaseModel):
                         text=f"{ctx.slack_ping_user} received {self.format_money()} via cheque",
                         **merchant_details
                     )
+            case "p2p_payment":
+                if is_send:
+                    return SlackMessage(
+                        text=f"{ctx.slack_ping_user} sent {self.format_money()} to a Monzo user",
+                        **merchant_details
+                    )
+                else:
+                    return SlackMessage(
+                        text=f"{ctx.slack_ping_user} received {self.format_money()} from a Monzo user",
+                        **merchant_details
+                    )
             case scheme:
                 if is_send:
                     return SlackMessage(

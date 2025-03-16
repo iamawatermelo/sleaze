@@ -21,7 +21,7 @@ need to provide. For example:
 >   # the channel ID to send to
 >   SLEAZE_SLACK_CHANNEL=C... \
 >   # the user to ping (use <@USER_ID> format)
->   SLEAZE_PING_USER="<@U...>" \
+>   SLEAZE_SLACK_PING="<@U...>" \
 >   # of course, generate your own :p
 >   # you can use `openssl rand -hex 16`
 >   SLEAZE_WEBHOOK_AUTH_TOKEN=2ab799aa8ebba70f01f452ac1ce7f012 \
