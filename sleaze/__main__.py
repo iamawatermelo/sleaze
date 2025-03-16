@@ -67,7 +67,7 @@ def format_money(amount: int, currency: str):
     amount_str = str(abs(amount)).rjust(3, "0")
     
     if abs(amount) < 100 and currency == "GBP":
-        return f"{amount_str[-2:]}p"
+        return f"{amount_str[-2:].lstrip("0")}p"
     
     if amount % 100 == 0:
         amount_str = amount_str[:-2]
